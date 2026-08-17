@@ -40,3 +40,24 @@ class RentalSystem:
                 return
 
         print("Vehicle not found.")
+        
+    def return_vehicle(self, vehicle_number):
+
+        for vehicle in self.vehicles:
+
+            if vehicle.vehicle_number == vehicle_number:
+
+                if vehicle.is_available:
+                    print("Vehicle is not currently rented.")
+                    return
+
+                vehicle.is_available = True
+
+                print("\n========== RETURN DETAILS ==========")
+                print("Vehicle Number :", vehicle.vehicle_number)
+                print("Brand          :", vehicle.brand)
+                print("Status         : Vehicle returned successfully.")
+
+                return
+
+        print("Vehicle not found.")
