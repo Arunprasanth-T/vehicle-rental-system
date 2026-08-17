@@ -27,7 +27,8 @@ def main():
         print("=" * 40)
         print("1. Display Vehicles")
         print("2. Rent Vehicle")
-        print("3. Exit")
+        print("3. Return Vehicle")
+        print("4. Exit")
 
         choice = input("Enter your choice: ")
 
@@ -46,6 +47,11 @@ def main():
                 print("Please enter a valid number of days.")
 
         elif choice == "3":
+
+            vehicle_number = input("Enter vehicle number: ")
+            rental_system.return_vehicle(vehicle_number)
+        
+        elif choice == "4":
 
             print("Thank you for using Vehicle Rental System.")
             break

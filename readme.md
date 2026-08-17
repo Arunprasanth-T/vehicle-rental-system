@@ -37,3 +37,21 @@ Vehicle-related data is maintained inside the respective classes.
 ```python
 display_details()
 calculate_rental_amount()
+## Return Vehicle
+
+The system allows users to return a rented vehicle.
+
+When a vehicle is successfully rented, its availability status is changed to `False`. When the vehicle is returned, the status is changed back to `True`.
+
+### Return Process
+
+```text
+Available
+    ↓
+  Rent
+    ↓
+Rented
+    ↓
+ Return
+    ↓
+Available
